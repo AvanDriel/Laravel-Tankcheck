@@ -8350,8 +8350,27 @@ button.close {
   }
 }
 
-#map {
-  height: 400px;
+html {
+  height: 100%;
   width: 100%;
+  margin: 0;
+}
+
+#map {
+  height: 80vh;
+  width: 100%;
+}
+
+.navbar {
+  height: 10vh;
+  width: 100vw;
+  background-color: #f2f2f2;
+  margin: 0;
+}
+
+.footer {
+  height: 10vh;
+  width: 100%;
+  margin: 0;
 }
 

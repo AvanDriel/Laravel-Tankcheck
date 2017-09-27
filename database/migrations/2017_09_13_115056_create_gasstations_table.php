@@ -15,6 +15,11 @@ class CreateGasstationsTable extends Migration
     {
         Schema::create('gasstations', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('adress');
+            $table->decimal('gasprice');
+            $table->double('latitude');
+            $table->double('longitude');
             $table->timestamps();
         });
     }

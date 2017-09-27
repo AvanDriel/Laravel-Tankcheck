@@ -8,11 +8,13 @@
 
 	@include('layouts.nav')
 
-	<div class="container">
+	<div>
 		@yield('content')
 	</div>	
 
+	
 	@include('layouts.footer')
+	
 
 </body>
 </html>

@@ -1,3 +1,5 @@
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
@@ -5,30 +7,92 @@
 // Variables
 @import "variables";
 
-// Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
-
 html {
 	height: 100%;
 	width: 100%;
-	margin: 0;
 }
 
+// h1, h2, h3, h4, h5, h6 {
+// 	margin-top:0;
+// 	margin-bottom:0;
+// }
+
+//google maps styling
 #map {
     height: 80vh;
     width: 100%;
 }
 
+//content
+.content {
+	height: 80vh;
+	width: 100%;
+}
+
+//navbar styling
 .navbar {
 	height: 10vh;
 	width: 100vw;
-	background-color: #f2f2f2; 
+	background-color: #bfd7ff; 
 	margin: 0;
 }
 
+.navbar img{
+	height: 10vh;
+	float: left;
+}
+
+.navbar #account_button {
+	float: right;
+	display: inline;
+	margin-right: 5vw;
+	margin-top: 3vh;
+}
+
+.navbar #account_button img {
+	height: 3vh;
+	margin-right: 10px;
+}
+
+.navbar #account_button a {
+	font-size: 2vh;
+	text-decoration: none;
+	color: black;
+}
+
+//footer styling
 .footer {
 	height: 10vh;
 	width: 100%;
 	margin: 0;
+	display: inline;
+	float: bottom;
 }
+
+//registration form
+
+.register_form {
+	font-size: 3vh;
+}
+
+.register_form input {
+	height: 5vh;
+	width: 80vw;
+	font-size: 4vh;
+	border: solid grey 2px;
+	border-bottom: solid black 4px;
+	border-radius: 2px;
+	margin-left: 10vw;
+}
+
+.register_form h1 {
+	margin-left: 10vw;
+	margin-top: 20px;
+}
+
+.register_form button {
+	margin-left: 10vw;
+	font-size: 3vh;
+}
+
 

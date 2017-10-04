@@ -8,7 +8,7 @@
 
 	@include('layouts.nav')
 
-	<div>
+	<div class="content">
 		@yield('content')
 	</div>	
 

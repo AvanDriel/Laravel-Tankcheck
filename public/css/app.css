@@ -8356,13 +8356,16 @@ html {
 }
 
 #map {
-  height: 80vh;
+  height: 100vh;
   width: 100%;
 }
 
 .content {
-  height: 80vh;
+  height: 100vh;
   width: 100%;
+  z-index: -1;
+  position: fixed;
+  top: 0;
 }
 
 .navbar {
@@ -8370,6 +8373,8 @@ html {
   width: 100vw;
   background-color: #bfd7ff;
   margin: 0;
+  position: fixed;
+  top: 0;
 }
 
 .navbar img {
@@ -8400,7 +8405,21 @@ html {
   width: 100%;
   margin: 0;
   display: inline;
-  float: bottom;
+  position: fixed;
+  bottom: 0;
+  background-color: #bfd7ff;
+}
+
+.footer input {
+  height: 5vh;
+  width: 70vw;
+  font-size: 2.5vh;
+  margin-top: 2.5vh;
+  margin-left: 15vw;
+}
+
+.pac-container {
+  display: none;
 }
 
 .register_form {

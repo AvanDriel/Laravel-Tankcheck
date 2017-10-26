@@ -1,4 +1,4 @@
-ñ<?php
+<?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -18,6 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('password');
+            $table->integer('prices_checked')->default('0');
+            $table->integer('prices_approved')->default('0');
             $table->integer('auth_level')->default('0');
             $table->rememberToken();
             $table->timestamps();

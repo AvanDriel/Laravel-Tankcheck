@@ -2,6 +2,8 @@
 
 @section ('content')
 
+	<div class="spacer"></div>
+
 	<div class= "register_form"> 
 
 		<h1>Register</h1>

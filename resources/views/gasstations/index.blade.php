@@ -66,6 +66,9 @@
             '<div id="bodyContent">'+
             '<p>{{$gasstation->adress}}</p>'+
             '<p>€{{$gasstation->gasprice}}</p>'+
+            '<p>Price by: {{$gasstation->updated_by}}</p>'+
+            '<a href="#"><img src="images/checkmark.png"></a>'+
+            '<a href="#"><img src="images/exit.png"></a>'+
             '</div>'+
             '</div>';
 

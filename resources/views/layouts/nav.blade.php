@@ -1,21 +1,31 @@
 <div class="navbar">
 
-	<img src="images/logo.png">
+	<a href="/home">
+		<img src="images/logo.png">
+	</a>	
 
 	<div id="account_button">
-		<a href="/register"><img src="images/avatar_icon.png">
+		<img src="images/avatar_icon.png">
 
 			@if (Auth::check())
 
-				{{Auth::user()->name }}
+				<a href="#">{{Auth::user()->name }}</a>		<a href="/logout">Logout</a>
 
 			@else
 			
-				Login / Register	
+				<a href="/login">Login</a> / <a href="/register">Register</a>	
 
 			@endif
-
-		</a>
 	</div>
+
+	@if (Auth::check()&&((Auth::user()->auth_level)>1))
+
+		<div id="admin_button">
+			
+			<a href="/admin">Admin Page</a>
+
+		</div>
+		
+	@endif
 		
 </div>	

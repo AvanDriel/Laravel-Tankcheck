@@ -20,8 +20,8 @@ class CreateGasstationsTable extends Migration
             $table->decimal('gasprice');
             $table->double('latitude');
             $table->double('longitude');
-            $table->integer('created_by');
-            $table->integer('updated_by');
+            $table->integer('user_id');
+            $table->integer('active')->default('1');
             $table->timestamps();
         });
     }

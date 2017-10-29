@@ -15,17 +15,17 @@ class GasstationsController extends Controller
     }
 
     public function create(){
-    	//Check if the user is logged in and is on the Auth level of an Admin
-    	if(Auth::check()&&((Auth::user()->auth_level)>1)){
+    	//Check if the user is logged in and is an approved user
+    	if(Auth::check()&&((Auth::user()->auth_level)>0)){
     		return view('gasstations.create');
     	} else {
     		return redirect()->home();
     	}
     }
 
-     public function store(Request $request)
-    {	//Check if the user is logged in and is on the Auth level of an Admin
-    	if(Auth::check()&&((Auth::user()->auth_level)>1)){
+     public function store(Request $request) {	
+        //Check if the user is logged in and is an approved user
+    	if(Auth::check()&&((Auth::user()->auth_level)>0)){
 
 	    	//validate form
 	    	$this->validate(request(), [
@@ -35,9 +35,7 @@ class GasstationsController extends Controller
 	    		'latitude' => 'required',
 	    		'longitude' => 'required'
 	    	]);
-
-	    	//create
-	    	//$gasstation = Gasstation::create(request(['name', 'adress', 'gasprice', 'latitude', 'longitude', 'currentuser', 'currentuser']));  
+ 
             $gasstation = Gasstation::create($request->all());  
 
 	    	//redirect home

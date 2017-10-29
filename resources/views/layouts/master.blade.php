@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>My app</title>
-	<link type="text/css" href="css/app.css" rel="stylesheet"/>
+	<link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
 </head>
 <body>
 

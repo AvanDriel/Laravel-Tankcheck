@@ -1,4 +1,4 @@
-@extends ('layouts.admin')
+@extends ('layouts.nobar')
 
 @section ('content')
 
@@ -44,15 +44,10 @@
 
 			<div class="form-group">
 				
-				<input type="hidden" name="created_by" id="created_by" value="{{$currentuser = Auth::user()->id}}">
+				<input type="hidden" name="user_id" id="user_id" value="{{$currentuser = Auth::user()->id}}">
 
 			</div>
 
-			<div class="form-group">
-				
-				<input type="hidden" name="updated_by" id="updated_by" value="{{$currentuser = Auth::user()->id}}">
-
-			</div>
 
 			<div class="form-group">
 

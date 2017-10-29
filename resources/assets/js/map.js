@@ -1,13 +1,4 @@
-@extends ('layouts.master')
-
-
-@section ('content')
-	
-	<div id="map"></div>
-
-	<script type="text/javascript">
-   
-    function initMap() {
+function initMap() {
             var uluru = {lat: 51.933303, lng: 4.45201};
             
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -53,7 +44,13 @@
               });
               map.fitBounds(bounds);
             });
-    
+
+             // Create the DIV to hold the control and call the constructor passing in this DIV
+              var geolocationDiv = document.createElement('div');
+              var geolocationControl = new GeolocationControl(geolocationDiv, map);
+
+              map.controls[google.maps.ControlPosition.TOP_CENTER].push(geolocationDiv);
+     
 
         @foreach ($gasstations as $gasstation)
             var location{{$gasstation->id}}= {lat: {{$gasstation->latitude}}, lng: {{$gasstation->longitude}}};
@@ -85,13 +82,4 @@
                 infowindow{{$gasstation->id}}.open(map, marker{{$gasstation->id}});
               });
         @endforeach
-
     }
-
-</script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7jz7tGATiylYJH4Qa--VfUWz0GWfOvNc&&libraries=places&callback=initMap" async defer">
-</script>
-
-@endsection
-

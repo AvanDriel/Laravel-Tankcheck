@@ -36,6 +36,17 @@ html {
 	height: 10vh;
 }
 
+.gpsbutton {
+	position: fixed;
+	bottom: 11vh;
+	right: 10px;
+	height: 6vh;
+}
+
+.gpsbutton img {
+	height: 6vh;
+}
+
 //navbar styling
 .navbar {
 	height: 10vh;
@@ -82,6 +93,9 @@ html {
 	color: black;
 }
 
+.logout_button{
+	margin-left: 20px;
+}
 
 //footer styling
 .footer {
@@ -134,7 +148,34 @@ html {
 }
 
 
-//search box
+//Admin
+//User list
+.user_row li {
+	display: inline;
+	margin-right: 20px;
+}
+
+.search_form {
+	margin-left: 50px;
+	display: table;
+}
+
+.tablecell {
+	display: table-cell;
+	padding-right: 10px;
+}
+
+.username_input {
+	width: 200px;
+}
+
+//Thank you page
+.thanks_message{
+	text-align: center;
+	margin-top: 100px;
+}
+
+
 
 
 

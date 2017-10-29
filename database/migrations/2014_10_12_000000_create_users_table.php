@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->integer('prices_checked')->default('0');
             $table->integer('prices_approved')->default('0');
             $table->integer('auth_level')->default('0');
+            $table->integer('active')->default('1');
             $table->rememberToken();
             $table->timestamps();
         });

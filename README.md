@@ -1,5 +1,7 @@
 # Laravel Tankcheck
 
+NOTE: since github doesn't like me uploading the vue part to this repo, I will upload it seperately.
+
 ### The assignment
 I had to make a backend system using an MVC framework. For this I picked laravel, because I really like the way laravel works and the good explanation and documentation it has.
 Using Laravel I built a website where users can post gas prices for gasstations and earn points from other user if the price is correct, ultimately to find the cheapest gas nearby.
